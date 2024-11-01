@@ -2,11 +2,11 @@
 # # Chỉ định sử dụng docker-compose để xây dựng các dịch vụ
 
 # # Cấu hình cho MySQL
-# FROM mysql:8.0 AS mysql
-# ENV MYSQL_ROOT_PASSWORD=example
-# ENV MYSQL_DATABASE=testdb
-# ENV MYSQL_USER=user
-# ENV MYSQL_PASSWORD=password
+FROM mysql:8.0 AS mysql
+ENV MYSQL_ROOT_PASSWORD=example
+ENV MYSQL_DATABASE=testdb
+ENV MYSQL_USER=user
+ENV MYSQL_PASSWORD=password
 
 # # Cấu hình cho PostgreSQL
 # FROM postgres:latest AS postgres
@@ -24,4 +24,6 @@
 # ENV ORACLE_PASSWORD=password
 
 # # Chỉ định cổng cho các dịch vụ
-# EXPOSE 3306 5432 1433 1521
+EXPOSE 3306 
+
+#  5432 1433 1521
